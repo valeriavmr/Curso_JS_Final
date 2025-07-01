@@ -20,7 +20,7 @@ Página web responsive de una libreria, con secciones de:
 - API fetch
 
 # Cómo ejecutar la página
-- Clona el repositorio en: https://github.com/valeriavmr/Curso_JS.git
+- Clona el repositorio en: https://github.com/valeriavmr/Curso_JS_Final.git
 - Abre el archivo index.html en tu navegador
 
 # Autor

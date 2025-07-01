@@ -2,9 +2,8 @@
 Logica para agregar los libros de la API
 */
 
-async function crearListaLibros(){
+/*async function crearListaLibros(){
 
-  //Uso my json server para traerme la api falsa(con apis reales solo va el link)
   //Uso async y await para más claridad de código
 
   //Me traigo el contenedor donde iran los libros
@@ -47,6 +46,68 @@ async function crearListaLibros(){
       p_autor.appendChild(autor)
       p_precio.appendChild(precio)
       article.appendChild(p_autor)
+      article.appendChild(p_precio)
+
+      //adjunto la tarjeta a la lista
+      contenedor_libros.appendChild(article)
+    })
+
+  }catch (error) {
+    //Por si hay errores
+    console.error("Error al cargar productos:", error);
+  }
+  //agrego los botones
+  agregarBotonAgregar()
+  }
+}*/
+
+async function crearListaLibros(){
+  
+  //Uso async y await para más claridad de código
+
+  //Me traigo el contenedor donde iran los libros
+  let contenedor_libros = document.getElementById("items")
+  //Solo se ejecuta cuando exista el contenedor
+  if(contenedor_libros!=null){
+      try{
+    //Me traigo los datos de la api
+    const response = await fetch('https://dummyjson.com/products/');
+    const data = await response.json();
+    const productos = data.products
+
+    //Itero los libros para armarlos
+    productos.forEach( producto=>{
+
+      console.log(producto)
+
+      //creo los elementos que compondrán las tarjetas
+      let article = document.createElement("article")
+      let h3 = document.createElement("h3")
+      let imagen = document.createElement("img")
+      let p_disponible = document.createElement("p")
+      let disponible = document.createElement("strong")
+      let p_precio = document.createElement("p")
+      let precio = document.createElement("strong")
+
+      //Le pongo clases a los elementos por recuperar
+      imagen.className = "imagenes"
+      precio.className = "precio"
+
+      //seteo los datos
+      h3.textContent = producto.title;
+      imagen.src = producto.images[0];
+      imagen.alt = producto.title;
+      disponible.textContent = producto.availabilityStatus;
+      p_disponible.textContent = `Disponibilidada: `;
+      precio.textContent = `$${producto.price}`;
+      p_precio.textContent = `Precio: `
+
+      //armo la tarjeta
+      article.appendChild(h3)
+      article.appendChild(imagen)
+      p_disponible.appendChild(disponible)
+      p_precio.appendChild(precio)
+      article.appendChild(p_disponible)
       article.appendChild(p_precio)
 
       //adjunto la tarjeta a la lista
@@ -134,3 +195,7 @@ function actualizarContadorCarrito() {
 }
 
 document.addEventListener("DOMContentLoaded", actualizarContadorCarrito());
+
+fetch('https://dummyjson.com/products/category-list')
+.then(res => res.json())
+.then(console.log);

@@ -45,6 +45,7 @@ function mostrarOpcionesCarrito(){
         let total_producto_str = total_producto.textContent.replace("$","")
         let total_producto_num = Number(total_producto_str)
         total_compra+= total_producto_num
+        total_compra = Number(total_compra.toFixed(2))
 
         //me aseguro que el total cambie segun la cantidad
         cantidad_input.onchange = () =>{
@@ -81,7 +82,7 @@ function mostrarOpcionesCarrito(){
 
         //Resto el total del producto a la compra y luego borro el elemento
         del_producto.onclick = () =>{
-            total_compra -= Number(element.precio)*Number(cantidad_input.value)
+            total_compra -= Number((Number(element.precio)*Number(cantidad_input.value)).toFixed(2))
             total_div.textContent = `TOTAL COMPRA: $${total_compra}`
             const carritoActualizado = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -116,8 +117,10 @@ document.addEventListener("DOMContentLoaded",mostrarOpcionesCarrito())
 //Para cancelar la compra
 let btn_cancel = document.getElementById("btn_cancel_compra")
 btn_cancel.onclick = () =>{
-    localStorage.clear();
-    window.location.href="../index.html"
+    if(window.confirm("¿Estás seguro de querer vaciar el carrito?")){
+      localStorage.clear();
+      window.location.href="../index.html"
+    }
 }
 
 //Para seguir comprando
@@ -167,13 +170,16 @@ document.getElementById("btn_fin_compra").onclick = () => {
     total += Number(item.precio) * cantidad;
   });
 
-  const mensaje = `El total de tu compra es $${total}.\n ¡Gracias por su compra!`;
+  //Pongo un confirm
+  if(window.confirm("¿Estás seguro de finalizar la compra?")){
+    const mensaje = `El total de tu compra es $${total}.\n ¡Gracias por su compra!`;
 
-  alert(mensaje);
+    alert(mensaje);
 
-  //Limpio el storage
-  localStorage.clear()
+    //Limpio el storage
+    localStorage.clear()
 
-  //Me voy al inicio
-  window.location.href="../index.html"
+    //Me voy al inicio
+    window.location.href="../index.html"
+  }
 };
