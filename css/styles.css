@@ -1,0 +1,219 @@
+*{
+    color:black;
+    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto auto;
+    gap: 0;
+    background-color: #E3D9CA;
+    text-align: center;
+    border-style: groove;
+    border-color: transparent;
+}
+
+#logo{
+    height: 2.5em;
+}
+
+.menu > ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #E3D9CA;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 0 1em 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: #F58EFF;
+    cursor:pointer
+}
+
+.main-sections {
+    display: grid;
+    grid-template-columns:75% 25%;
+    grid-template-rows: auto; 
+    background-color: #FFDFFB;
+    border-style: groove;
+    border-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}   
+
+.main-sections > main > h2 {
+    text-align: center;
+    padding: 1em;
+}
+
+.main-sections > main > h3 {
+    text-align: justify;
+    padding: 1em;
+    padding-inline-start: 2em;
+}
+
+.main-sections > main > p {
+    text-align: justify;
+    padding-inline-start: 2em;
+    padding-inline-end: 2em;
+    padding-bottom: 0.8em;
+}
+
+#reseñas{
+    background-color: #F58EFF;
+    text-align: justify;
+    padding: 1em;
+    border-left-style: groove;
+    border-color: transparent;
+}
+
+#reseñas > h2{
+    text-align: center;
+}
+
+#reseñas > article > h3{
+    padding: 1em;
+    text-align: center;
+}
+
+#reseñas > article {
+    padding: 1em;
+    margin: 1.5em;
+    border-radius: 1em;
+    border-color:transparent;
+    border-style: groove;
+    background-color: #c8b8ff;
+}
+
+.img{
+    text-align: center;
+    vertical-align:top;
+}
+
+#img-libros{
+    height: 40em;
+    padding-bottom: 2em;
+}
+
+#img-han-kang{
+    height: 20em;
+}
+
+figure{
+    float: left;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+figcaption {
+  font: italic smaller "Montserrat";
+  text-align: center;
+}
+
+/*Footer*/
+footer{
+    background-color: #E3D9CA;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    padding:2em;
+}
+
+.socials{
+    
+    position: relative;
+    top: 45%;
+}
+
+.socials > ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.socials > ul > li > a > img{
+    height: 1.1em;
+}
+
+.footer-note{
+    padding-top: 1em;
+    text-align: center;
+    font-weight:200;
+}
+
+/*seccion lecturas recomendadas*/
+
+#lecturas-recomendadas {
+    background-color: #c8b8ff;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    padding: 1em;
+    text-align: center;
+    border-color: transparent;
+    border-style: groove;
+}
+
+h3{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.fila-2{
+    display: flex;
+    justify-content: space-around;
+    align-items:stretch;
+    padding: 1em;
+}
+
+.fila-2 > article{
+    text-align: justify;
+    padding:1em;
+    margin: 0.5em;
+    border-radius: 1em;
+    border-color: transparent;
+    border-style:groove;
+    background-color: #F58EFF;
+}
+
+/*Los hover*/
+
+.fila-2 > article:hover{
+    padding:3em;
+    background-color: hsl(295, 100%, 50%);
+    cursor: pointer;
+}
+
+#reseñas > article:hover{
+    padding:2em;
+    background-color: #5999ff;
+    cursor: pointer;
+}
+
+

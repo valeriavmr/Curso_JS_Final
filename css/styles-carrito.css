@@ -1,0 +1,143 @@
+body{
+    height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+    background-color: #FFDFFB;
+}
+
+main > h2{
+    text-align: center;
+    padding: 2em;
+}
+
+.items{
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-style: groove;
+    border-color: transparent;
+}
+
+.items > article{
+    align-items: center;
+    text-align: center;
+    padding:1.5em;
+    margin: 1em;
+    border-radius: 1em;
+    border-color: transparent;
+    border-style:groove;
+    background-color: #F58EFF;
+
+}
+
+.items > article:hover{
+    background-color: hsl(295, 100%, 50%);
+}
+
+.items > article > .imagenes{
+    height: 10em;
+}
+
+#btn_add_compra{
+    padding:1em;
+    border-radius: 0.5em;
+    border-style: none;
+    margin: 0.5em;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+#btn_add_compra:hover {cursor: pointer;}
+
+.subtotal{
+    background-color: #ff93f1;
+    margin: 5%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1em;
+}
+
+#tabla-carrito{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-carrito thead {
+  background-color: #f5f5f5;
+}
+
+#tabla-carrito th,
+#tabla-carrito td {
+  border: 1px solid #ccc;
+  padding: 1em;
+  text-align: center;
+}
+
+#del_producto_img{
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.producto_carrito{
+    padding: 1em;
+}
+
+.producto_carrito:hover{
+    background-color: hsl(295, 100%, 50%);
+}
+
+#total_compra{
+    padding: 1em;
+    text-align: center;
+}
+
+.opciones{
+    padding: 2em;
+    text-align: center;
+}
+
+.opciones > button{
+    padding:1em;
+    border-radius: 0.5em;
+    border-style: none;
+    margin: 0.5em;
+    font-weight: bold;
+    background-color: rgb(195, 0, 255);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#carrito-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#carrito-container {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+}
+
+#contador-carrito {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: none;
+  pointer-events: none;
+}

@@ -1,0 +1,151 @@
+/*Celulares pequeños*/
+
+/* Estilos para pantallas pequeñas (menos de 600px) */
+@media only screen and (max-width: 700px) {
+ body {
+ font-size: 7.5px;
+ }
+
+ /*menu*/
+
+ ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+ }
+
+ #carrito-container{
+    font-size: 8px;
+ }
+
+ #contador-carrito{
+    font-size: 8px;
+ }
+
+ .material-icons{
+    font-size: 12px;
+ }
+
+/*main*/
+
+.main-sections {
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto auto; 
+}
+
+#img-libros{
+    height: 20em;
+    padding:2em;
+    padding-top:0;
+    float: left;
+}
+
+#img-han-kang{
+    height: 8em;
+}
+
+/*seccion lecturas recomendadas*/
+
+.img-lecturas{
+    height: 10em;
+    float: left;
+    padding: 1em;
+}
+
+.fila-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+/*contacto*/
+
+textarea{
+    width: 75vw;
+    font-size: 10px;
+}
+
+#btn-formulario{
+    font-size: 10px;
+}
+
+/*Productos*/
+
+#items{
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#btn_add_compra{
+    font-size: 10px;
+}
+
+/*Carrito*/
+.opciones > button{
+    font-size: 7.5px;
+}
+
+#del_producto_img{
+    height: 2em;
+}
+
+}
+
+/*pantallas medianas*/
+
+@media only screen and (max-width: 1024px) {
+
+/*main*/
+
+.nav_header{
+    font-size: 0.4rem;
+}
+
+#img-libros{
+    height: 25em;
+    padding:2em;
+    padding-top:0;
+    float: left;
+}
+
+#img-han-kang{
+    height: 11em;
+}
+
+/*reseñas*/
+.main-sections {
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto auto; 
+}
+
+/*seccion lecturas recomendadas*/
+
+.img-lecturas{
+    height: 10em;
+}  
+
+.fila-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+/*contacto*/
+
+textarea{
+    width: 75vw;
+}
+
+/*Productos*/
+
+#items{
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+

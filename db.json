@@ -1,0 +1,58 @@
+{
+	"libros":[
+	{
+		"titulo":"The Maze Runner",
+		"autor": "James Dashner",
+		"precio":"$25000",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/maze_runner.avif"
+	},
+	{
+		"titulo":"Saga El señor de los Anillos",
+		"autor":"J. R. R. Tolkien",
+		"precio":"$99999",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/senior_anillos_1.webp"
+	},
+	{
+		"titulo":"La Vegetariana",
+		"autor":"Han Kang",
+		"precio":"$15899",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/la_vegetariana.png"
+	},
+	{
+		"titulo":"Saga Harry Potter",
+		"autor":"J. K. Rowling",
+		"precio":"$32499",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/harry_potter_7.webp"
+	},
+	{
+		"titulo":"Saga Nacidos de la Bruma",
+		"autor":"Brandon Sanderson",
+		"precio":"$29999",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/nacidos-de-la-bruma.jpeg"
+	},
+	{
+		"titulo":"Ficciones",
+		"autor":"Jorge Luis Borges",
+		"precio":"$9999",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/ficciones.webp"
+	},
+	{
+		"titulo":"El beso de la mujer araña",
+		"autor":"Han Kang",
+		"precio":"$25899",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/beso-mujer-arana.jpeg"
+	},
+	{
+		"titulo":"Actos Humanos",
+		"autor":"Manuel Puig",
+		"precio":"$30000",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/actos-humanos.jpeg"
+	},
+	{
+		"titulo":"Tokio Blues",
+		"autor":"Haruki Murakami",
+		"precio":"$35000",
+		"imagen":"https://raw.githubusercontent.com/valeriavmr/Curso_JS/main/res/tokio-blues.jpeg"
+	}
+	]
+}
